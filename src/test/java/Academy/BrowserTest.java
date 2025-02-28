@@ -16,13 +16,13 @@ public class BrowserTest {
 	@Test
 	public void getData()
 	{
-		System.out.println("Hello Guys");
+		System.out.println("Hello for testing nodeserver");
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		WebDriver driver =new ChromeDriver();
-		driver.get("https://guarulho.azurewebsites.net/webapp/");
+		driver.get("https://nodeserverguarito.azurewebsites.net/");
 		String text =driver.findElement(By.cssSelector("h1")).getText();
-		System.out.println(text);
-		Assert.assertTrue(text.equalsIgnoreCase("Edwin Guarachi Training"));
+		System.out.println(text+" compare with express");
+		Assert.assertTrue(text.equalsIgnoreCase("Express"));
 		driver.close();
 	
 		
